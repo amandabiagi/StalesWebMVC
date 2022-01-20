@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -9,9 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SalesWebMVC.Data;
+using SalesWebMvcV2.Data;
 
-namespace SalesWebMVC
+namespace SalesWebMvcV2
 {
     public class Startup
     {
@@ -27,8 +27,8 @@ namespace SalesWebMVC
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<SalesWebMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMVCContext")));
+            services.AddDbContext<SalesWebMvcV2Context>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcV2Context")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

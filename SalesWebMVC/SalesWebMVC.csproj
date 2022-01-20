@@ -5,6 +5,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\NovaPasta\**" />
+    <Compile Remove="Views\Departaments\**" />
+    <Content Remove="Controllers\NovaPasta\**" />
+    <Content Remove="Views\Departaments\**" />
+    <EmbeddedResource Remove="Controllers\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\Departaments\**" />
+    <None Remove="Controllers\NovaPasta\**" />
+    <None Remove="Views\Departaments\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\DepartamentsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Departaments\Create.cshtml" />
+    <None Include="Views\Departaments\Delete.cshtml" />
+    <None Include="Views\Departaments\Details.cshtml" />
+    <None Include="Views\Departaments\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
