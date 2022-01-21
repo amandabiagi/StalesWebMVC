@@ -1,4 +1,4 @@
-﻿@model SalesWebMvc.Models.Seller
+﻿@model SalesWebMvc.Models.ViewModels.SellerFormViewModel
     @{
         ViewData["Title"] = "Create";
     }
@@ -10,13 +10,13 @@
         <div class="col-md-4">
             <form asp-action="Create">
                 <div class="form-group">
-                    <label asp-for="Name" class="form-label mt-4" >Name</label>
+                    <label asp-for="Name" class="form-label mt-4">Name</label>
                     <input asp-for="Name" class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Email" class="form-label mt-4" >Email</label>
-                    <input asp-for="Email" class="form-control" />
+                    <label asp-for="Email" class="form-label mt-4">Email</label>
+                    <input for="exampleInputEmail1" asp-for="Email" class="form-control" />
                 </div>
 
                 <div class="form-group">
@@ -30,7 +30,17 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary"/>
+                    <label for="exampleSelect1" class="form-label mt-4">Departments</label>
+                    <select class="form-select" id="exampleSelect1">
+                        <option value="1">Computers</option>
+                        <option value="2">Electronics</option>
+                        <option value="3">Fashion</option>
+                        <option value="4">Books</option>                       
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
                 </div>
             </form>
         </div>
